@@ -10,9 +10,23 @@ const vscode = require('vscode');
  */
 function activate(context) {
 
-
 	console.log('Congratulations, your extension "first-ext" is now active!');
 
+	vscode.commands.executeCommand('extension.autoSave');
+	
+	// If window focus is changes => save
+	let listener = (e) =>{
+		if(e.focused == false){
+			vscode.workspace.saveAll();
+		}
+	}
+
+	let disposable = vscode.commands.registerCommand('extension.autoSave', () => {
+		let change = vscode.window.onDidChangeWindowState(listener);
+		return change;
+	});
+
+	context.subscriptions.push(disposable);
 }
 exports.activate = activate;
 
