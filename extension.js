@@ -19,7 +19,10 @@ function activate(context) {
 	// If window focus is changes => save
 	let listener = (e) =>{
 		if(e.focused == false){
-			vscode.workspace.saveAll();
+            vscode.workspace.saveAll();
+            // setStatusBarMessage(text: string, hideAfterTimeout: number): Disposable
+            // time unit of the hideAfterTimeout timer - millisecond
+            vscode.window.setStatusBarMessage('$(save-all) All files are saved', 4000);
 		}
 	}
 
