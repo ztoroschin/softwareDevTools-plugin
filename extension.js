@@ -18,12 +18,10 @@ function activate(context) {
 
 	// If window focus is changes => save
 	let listener = (e) =>{
-		if(e.focused == false){
+		if(e.focused == false)
             vscode.workspace.saveAll();
-            // setStatusBarMessage(text: string, hideAfterTimeout: number): Disposable
-            // time unit of the hideAfterTimeout timer - millisecond
+        else
             vscode.window.setStatusBarMessage('$(save-all) All files are saved', 4000);
-		}
 	}
 
 	let autoSaveCommand = vscode.commands.registerCommand('extension.autoSave', () => {
