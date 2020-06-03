@@ -12,40 +12,40 @@
 	"activationEvents": [
 		"*",
 		"onCommand:extension.addJsFileHeader",
-        "onLanguage:javascript"
+		"onLanguage:javascript"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"configuration": {
-            "type": "object",
-            "title": "JS File Header",
-            "properties": {
-                "jsFileHeader.Author": {
-                    "type": "string",
-                    "default": "ITMO",
-                    "description": "Author name and email"
-                },
-                "jsFileHeader.Copyright": {
-                    "type": "string",
-                    "default": "",
-                    "description": "Copyright information"
-                },
-                "jsFileHeader.License": {
-                    "type": "string",
-                    "default": "",
-                    "description": "License information"
-                }
-            }
-        },
+			"type": "object",
+			"title": "JS File Header",
+			"properties": {
+				"jsFileHeader.Author": {
+					"type": "string",
+					"default": "ITMO",
+					"description": "Author name and email"
+				},
+				"jsFileHeader.Copyright": {
+					"type": "string",
+					"default": "",
+					"description": "Copyright information"
+				},
+				"jsFileHeader.License": {
+					"type": "string",
+					"default": "",
+					"description": "License information"
+				}
+			}
+		},
 		"commands": [
 			{
 				"command": "first-ext.autoSave",
 				"title": "Autosaving on window change"
 			},
 			{
-                "command": "extension.addJsFileHeader",
-                "title": "JavaScript: Add File Header"
-            }
+				"command": "extension.addJsFileHeader",
+				"title": "JavaScript: Add File Header"
+			}
 		]
 	},
 	"scripts": {
