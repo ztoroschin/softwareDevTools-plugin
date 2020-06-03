@@ -2,7 +2,7 @@
 Plugin for VisualStudio Code project (Lab 5 from Software Development Tools couse)
 
 ## Features
-+ //TODO
-+ this
-+ list
++ JS File Header
++ Auto Save
++ Saved message on top
 
