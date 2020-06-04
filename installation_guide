@@ -1,0 +1,9 @@
+# Make sure you have Node.js installed
+    npm install -g vsce
+
+# run
+    vsce package
+# in extension root folder to create such VSIX files
+
+# install the extension with
+    code --install-extension first-ext-0.0.1.vsix
